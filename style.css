@@ -1,0 +1,346 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*=============================
+    Full Screen Styles
+================================*/
+@keyframes menu-transition {
+  from {
+    position: fixed;
+    top: 500px;
+    right: 0px;
+  }
+  to {
+    margin-top: 1%;
+    margin-bottom: 0px;
+
+    display: block;
+    position: fixed;
+    justify-content: center;
+
+    width: 20%;
+    right: 10px;
+    top: 500px;
+
+    background-color: lightblue;
+    border-radius: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+body {
+  width: 100%;
+  background-color: #FFF7F1;
+  font-family: 'PT Sans Narrow', sans-serif;
+  min-height: 1000px;
+}
+
+header {
+  width: 100%;
+}
+
+#park-bench {
+  width: inherit;
+  height: inherit;
+}
+
+#blog-description {
+  background-color: hsla(0, 0, 0, 0);
+  position: relative;
+  top: -100px;
+  padding: .3em;
+  color: white;
+  text-shadow: 2px 2px #ff0000;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-bottom: .3em;
+  margin-top: .3em;
+}
+
+aside {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -10%;
+  z-index: 3;
+
+  transition: width 2s;
+}
+
+.blog-genre {
+  float: left;
+  width: 30%;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.blog-genre h2{
+  font-size: 1.3em;
+  text-decoration: underline;
+  background-color: lightblue;
+  padding: 3%;
+  border-radius: 1em;
+  margin: 0% 1.2%;
+}
+
+
+#blog-previews {
+  width: 100%;
+}
+
+
+article {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  float: left;
+
+  background-color: white;
+  color: blue;
+
+  text-align: auto;
+  width: 90%;
+}
+
+#blog-preview-two {
+  border-radius: 0px 20px 20px 0px;
+}
+
+.book {
+  width: 110px;
+  height: 150px;
+  float: left;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #FF6868;
+  margin-left: .5em;
+  margin-right: 1.3em;
+}
+
+.book-binding {
+  height: inherit;
+  background-color: yellow;
+  width: 4px;
+  position: relative;
+  left: 10px;
+}
+
+.book-title {
+  position: relative;
+  color: white;
+  left: 50px;
+  top: -130px;
+}
+
+h2 {
+  margin-top: .4em;
+  font-size: 2em;
+  font-weight: 400;
+  background-color: #FFE97A;
+  padding: .1em;
+
+}
+
+.blog-preview {
+  background-color: inherit;
+}
+
+.content-area {
+  background-color: lightblue;
+}
+
+.blog-description {
+  min-width: 50%;
+
+  font-size: 1.1em;
+
+  margin: 10px;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(148, 255, 254, 0.9);
+  padding: .6em;
+  float: left;
+  top: -100px;
+  left: 8px;
+
+  transition: top .5s, left .5s, width .5s;
+}
+
+.more {
+  width: 0px;
+  transition: width .5s;
+}
+
+footer {
+  background-color: hsla(90, 60%, 40%, .8);
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 480px) {
+  .blog-preview {
+    width: 70%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    height: 500px;
+  }
+
+  #park-bench {
+    height: 500px;
+  }
+
+  #blog-description {
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0);
+
+
+    position: relative;
+    left: 20px;
+    top: -160px;
+    margin-bottom: 0px;
+  }
+
+  h1 {
+    font-size: 5em;
+  }
+
+  .blog-description {
+    width: 80%;
+  }
+
+  aside {
+    /* Before transition code */
+    display: block;
+    position: fixed;
+    justify-content: center;
+
+    /* during */
+    animation-name: menu-transition;
+    animation-duration: 1s;
+    margin-top: 1%;
+    margin-bottom: 0px;
+
+    /* after */
+    width: 20%;
+    right: 10px;
+    top: 500px;
+
+    background-color: lightblue;
+    border-radius: 20px;
+    padding-bottom: 10px;
+
+
+  }
+
+  .blog-genre h2 {
+    text-decoration: none;
+  }
+
+  .blog-genre {
+    width: 100%;
+  }
+
+  .blog-preview {
+    margin-bottom: 1%;
+    margin-top: 2%;
+  }
+
+  #blog-previews {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .book {
+    width: 165px;
+    height: 225px;
+  }
+  .book-title {
+    top: -185px;
+    left: 75px;
+  }
+  .blog-description {
+    left: -10px;
+    top: -2em;
+    width: 55%;
+  }
+
+  .more a::after {
+    content: "more";
+  }
+
+  .more {
+    width: 70%;
+    height: 35px;
+
+    position: relative;
+    top: 155px;
+    right: 0px;
+
+    background-color: teal;
+
+  }
+
+  .more a {
+    position: relative;
+    top: 8px;
+    left: 100px;
+    color: white;
+  }
+
+}
